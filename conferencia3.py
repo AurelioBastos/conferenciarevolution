@@ -135,25 +135,25 @@ if file1 and file2:
 
     if df1 is not None and df2 is not None:
 
-        st.header("2. Escolha as Colunas de Comparação")
+        st.header("2. Selecione as Colunas para Comparação")
 
         colunas_chave1 = st.sidebar.multiselect(
-            "Colunas Chave Base (Importe os arquivos que contenha as NOTAS)",
+            "Chave Base Notas (Selecione a coluna CHAVE para verificação)",
             df1.columns
         )
 
         colunas_chave2 = st.sidebar.multiselect(
-            "Colunas Chave Base (Importe os arquivos onde contenha as VENDAS)",
+            "Chave Base Vendas (Selecione a coluna CHAVE para verificação)",
             df2.columns
         )
 
         colunas_valor1 = st.sidebar.multiselect(
-            "Colunas de Valor Base (Importe os arquivos que contenha as NOTAS)",
+            "Valor Base Notas (Selecione a Coluna que contenha o valor a ser analisado)",
             df1.columns
         )
 
         colunas_valor2 = st.sidebar.multiselect(
-            "Colunas de Valor Base (Importe os arquivos onde contenha as VENDAS)",
+            "Valor Base Vendas (Selecione a Coluna que contenha o valor a ser analisado)",
             df2.columns
         )
 
