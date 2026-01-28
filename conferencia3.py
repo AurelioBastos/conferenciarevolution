@@ -111,7 +111,7 @@ col1, col2 = st.columns(2)
 
 with col1:
     file1 = st.file_uploader(
-        "Base Notas (Arquivo 1)",
+        "Base Notas (Importe os arquivos que contenha as NOTAS)",
         type=['csv', 'xls', 'xlsx'],
         accept_multiple_files=True
     )
@@ -119,7 +119,7 @@ with col1:
 
 with col2:
     file2 = st.file_uploader(
-        "Base Vendas (Arquivo 2)",
+        "Base Vendas (Importe os arquivos onde contenha as VENDAS)",
         type=['csv', 'xls', 'xlsx'],
         accept_multiple_files=True
     )
@@ -138,22 +138,22 @@ if file1 and file2:
         st.header("2. Escolha as Colunas de Comparação")
 
         colunas_chave1 = st.sidebar.multiselect(
-            "Colunas Chave Base (Arquivo 1)",
+            "Colunas Chave Base (Importe os arquivos que contenha as NOTAS)",
             df1.columns
         )
 
         colunas_chave2 = st.sidebar.multiselect(
-            "Colunas Chave Base (Arquivo 2)",
+            "Colunas Chave Base (Importe os arquivos onde contenha as VENDAS)",
             df2.columns
         )
 
         colunas_valor1 = st.sidebar.multiselect(
-            "Colunas de Valor Base (Arquivo 1)",
+            "Colunas de Valor Base (Importe os arquivos que contenha as NOTAS)",
             df1.columns
         )
 
         colunas_valor2 = st.sidebar.multiselect(
-            "Colunas de Valor Base (Arquivo 2)",
+            "Colunas de Valor Base (Importe os arquivos onde contenha as VENDAS)",
             df2.columns
         )
 
